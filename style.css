@@ -7,13 +7,22 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Teljesen fehér háttér */
+    background-color: #ffffff;
     color: #333;
     display: flex;
     min-height: 100vh;
 }
 
-/* Bal oldali menüsor (fehér háttérrel, jobb oldali vékony vonallal) */
+/* Alapértelmezésben a hamburger elemek rejtve vannak PC-n */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-label {
+    display: none;
+}
+
+/* Bal oldali menüsor (PC-n fix) */
 nav.sidebar {
     width: 260px;
     background-color: #ffffff;
@@ -24,7 +33,7 @@ nav.sidebar {
     position: fixed;
     height: 100vh;
     overflow-y: auto;
-    border-right: 1px dashed #b0bec5; /* Vékony szaggatott vagy folytonos vonal az elválasztáshoz, mint a képen */
+    border-right: 1px dashed #b0bec5;
 }
 
 nav.sidebar h2 {
@@ -35,16 +44,16 @@ nav.sidebar h2 {
     padding-bottom: 10px;
 }
 
-nav.sidebar ul {
+nav.sidebar ul.menu-list {
     list-style: none;
 }
 
-nav.sidebar ul li {
+nav.sidebar ul.menu-list li {
     margin-bottom: 8px;
 }
 
-nav.sidebar ul li a {
-    color: #2980b9; /* Klasszikus kék linkek, mint a mintán */
+nav.sidebar ul.menu-list li a {
+    color: #2980b9;
     text-decoration: none;
     display: block;
     padding: 6px 8px;
@@ -52,14 +61,14 @@ nav.sidebar ul li a {
     transition: background 0.2s, color 0.2s;
 }
 
-nav.sidebar ul li a:hover {
+nav.sidebar ul.menu-list li a:hover {
     background-color: #f0f0f0;
     color: #1abc9c;
 }
 
 /* Jobb oldali fő tartalomterület */
 .content-wrapper {
-    margin-left: 260px; /* Hagyja a helyet a fix bal oldali sávnak */
+    margin-left: 260px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -96,25 +105,51 @@ main {
 /* Reszponzív beállítások mobilos és tabletes nézethez (768 képpont alatt) */
 @media screen and (max-width: 768px) {
     body {
-        flex-direction: column !important; /* Egymás alá rendezzük a fix menüt és a tartalmat */
+        flex-direction: column !important;
     }
 
     nav.sidebar {
-        position: relative !important;     /* Mobilon már nem lebeg/fix, hanem a lap tetején kezdődik */
-        width: 100% !important;            /* Teljes szélességet kap */
-        height: auto !important;           /* A magassága igazodik a tartalomhoz/menüpontokhoz */
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
         overflow-y: visible !important;
         border-right: none !important;
-        border-bottom: 1px dashed #b0bec5 !important; /* Alulra kerül az elválasztó vonal */
+        border-bottom: 1px dashed #b0bec5 !important;
+        padding: 15px !important;
+    }
+
+    /* Megjelenítjük a hamburger gombot a profilkép alatt */
+    .menu-label {
+        display: block !important;
+        background-color: #2980b9;
+        color: white;
+        padding: 12px 15px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    /* Mobilon alapból elrejtjük a menülistát */
+    nav.sidebar ul.menu-list {
+        display: none !important;
+    }
+
+    /* Ha a checkbox be van pipálva (rákattintottak a gombra), megjelenik a lista */
+    .menu-checkbox:checked ~ ul.menu-list {
+        display: block !important;
     }
 
     .content-wrapper {
-        margin-left: 0 !important;         /* Eltüntetjük a PC-re szánt bal oldali margót */
+        margin-left: 0 !important;
         width: 100% !important;
     }
 
     .oldal-keret {
-        max-width: 100% !important;        /* Mobilon teljes szélességben terül el */
-        padding: 0 15px !important;        /* Kisebb oldalsó margók telefonon a szélénél */
+        max-width: 100% !important;
+        padding: 0 15px !important;
     }
 }

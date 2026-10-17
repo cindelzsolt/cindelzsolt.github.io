@@ -8,11 +8,16 @@
 </head>
 <body>
 
-    <!-- 1. Bal oldali fix menüsor (ez marad a helyén) -->
+    <!-- Bal oldali fix menüsor / mobilon a tetején -->
     <nav class="sidebar">
         <img src="Kepek/Profilkép.png" alt="Profilkép" style="width: 100%; height: auto; display: block; margin-bottom: 15px;">
-        <h2>Menü</h2>
-        <ul>
+        
+        <!-- Hamburger menü kapcsoló (csak mobilon látszik) -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-label">Menü ☰</label>
+        
+        <!-- Menüpontok listája -->
+        <ul class="menu-list">
             <li><a href="index.html">Főoldal</a></li>
             <li><a href="gyors-indulas.html">Gyors Indulás</a></li>
             <li><a href="kerdezos-lapozos-tajekoztato.html">Kérdezős Lapozós Tájékoztató</a></li>
@@ -24,10 +29,9 @@
         </ul>
     </nav>
 
-    <!-- 2. Jobb oldali tartalom wrapper -->
+    <!-- Jobb oldali tartalom wrapper -->
     <div class="content-wrapper">
         
-        <!-- 3. Itt kezdeményezzük a keretet, ami max 980px széles és balra van zárva -->
         <div class="oldal-keret">
             <img src="Kepek/Fejléc.png" alt="Fejléc" class="fejlec-kep">
             <header>
@@ -38,9 +42,9 @@
                 <h2>Üdvözöllek a weboldalamon</h2>
                 <p>Ez a weboldal a Sunrider hálózat gyors és hatékony építésének oktatását tartalmazza, hogy lépésről lépésre megvalósíthasd a céljaidat.</p>
             </main>
-        </div><!-- Itt záródik az oldal-keret -->
+        </div>
 
-    </div><!-- Itt záródik a content-wrapper -->
+    </div>
 
 </body>
 </html>
