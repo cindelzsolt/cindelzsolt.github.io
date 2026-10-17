@@ -78,3 +78,21 @@ main {
     background-color: #ffffff;
     flex: 1;
 }
+.oldal-keret {
+    width: 100%;             /* Keskenyebb monitorokon és mobilon teljesen kitölti a szélességet */
+    max-width: 980px;        /* Nagyobb (19 colos vagy nagyobb) monitoron megáll ebben a méretben */
+    margin: 0 auto;          /* Középre igazítja a keretet széles képernyőn */
+    box-sizing: border-box;  /* Biztosítja, hogy a margók és a padding ne nyomják szét a méretet */
+}
+@media screen and (max-width: 768px) {
+    .oldal-keret {
+        padding: 10px;
+    }
+
+    /* Példa az oszlopok egymás alá rendezésére mobilon */
+    .bal-menu, .fo-tartalom {
+        width: 100% !important;
+        float: none;
+        display: block;
+    }
+}
