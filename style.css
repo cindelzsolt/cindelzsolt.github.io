@@ -78,11 +78,13 @@ main {
     background-color: #ffffff;
     flex: 1;
 }
+
 .fejlec-kep {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .oldal-keret {
     width: 100%;
     max-width: 768px;
@@ -90,28 +92,29 @@ main {
     margin-right: auto !important;
     box-sizing: border-box;
 }
+
 /* Reszponzív beállítások mobilos és tabletes nézethez (768 képpont alatt) */
 @media screen and (max-width: 768px) {
     body {
-        flex-direction: column; /* Egymás alá rendezzük a fix menüt és a tartalmat */
+        flex-direction: column !important; /* Egymás alá rendezzük a fix menüt és a tartalmat */
     }
 
     nav.sidebar {
-        position: relative;     /* Mobilon már nem lebeg/fix, hanem a lap tetején kezdődik */
-        width: 100%;            /* Teljes szélességet kap */
-        height: auto;           /* A magassága igazodik a tartalomhoz/menüpontokhoz */
-        overflow-y: visible;
-        border-right: none;
-        border-bottom: 1px dashed #b0bec5; /* Alulra kerül az elválasztó vonal */
+        position: relative !important;     /* Mobilon már nem lebeg/fix, hanem a lap tetején kezdődik */
+        width: 100% !important;            /* Teljes szélességet kap */
+        height: auto !important;           /* A magassága igazodik a tartalomhoz/menüpontokhoz */
+        overflow-y: visible !important;
+        border-right: none !important;
+        border-bottom: 1px dashed #b0bec5 !important; /* Alulra kerül az elválasztó vonal */
     }
 
     .content-wrapper {
-        margin-left: 0;         /* Eltüntetjük a PC-re szánt bal oldali margót */
-        width: 100%;
+        margin-left: 0 !important;         /* Eltüntetjük a PC-re szánt bal oldali margót */
+        width: 100% !important;
     }
 
     .oldal-keret {
-        max-width: 100%;        /* Mobilon teljes szélességben terül el */
-        padding: 0 15px;        /* Kisebb oldalsó margók telefonon a szélénél */
+        max-width: 100% !important;        /* Mobilon teljes szélességben terül el */
+        padding: 0 15px !important;        /* Kisebb oldalsó margók telefonon a szélénél */
     }
 }
