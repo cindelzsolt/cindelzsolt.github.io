@@ -8,12 +8,19 @@
 </head>
 <body>
 
-    <!-- Bal oldali fix menüsor -->
+    <!-- Bal oldali fix menüsor / mobilon a tetején -->
     <nav class="sidebar">
         <!-- A profilkép pontosan a menü felett, a sáv teljes szélességében -->
         <img src="Kepek/Profilkép.png" alt="Profilkép" style="width: 100%; height: auto; display: block; margin-bottom: 15px;">
-        <h2>Menü</h2>
-        <ul>
+        
+        <!-- Rejtett checkbox a hamburger menühöz -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <!-- Kattintható Menü gomb mobilon -->
+        <label for="menu-toggle" class="menu-label">Menü ☰</label>
+        
+        <!-- Menüpontok listája -->
+        <ul class="menu-list">
             <li><a href="index.html">Főoldal</a></li>
             <li><a href="gyors-indulas.html">Gyors Indulás</a></li>
             <li><a href="kerdezos-lapozos-tajekoztato.html">Kérdezős Tájékoztató</a></li>
@@ -27,16 +34,20 @@
 
     <!-- Jobb oldali tartalom wrapper -->
     <div class="content-wrapper">
-        <!-- Az új fejléc kép a főoldal címe felett -->
-        <img src="Kepek/Borító Kép.png" alt="Fejléc" class="fejlec-kep">
-        <header>
-            <h1>Írott oktatóanyagok</h1>
-        </header>
+        
+        <div class="oldal-keret">
+            <!-- Frissítve Fejléc.png-re és ellátva a kerethez igazodó osztállyal -->
+            <img src="Kepek/Fejléc.png" alt="Fejléc" class="fejlec-kep">
+            <header>
+                <h1>Írott oktatóanyagok</h1>
+            </header>
 
-        <main>
-            <h2>Üdvözöllek az Írott oktatóanyagok oldalon!</h2>
-            <p>Itt érhetők el a letölthető és olvasható segédanyagok, dokumentumok.</p>
-        </main>
+            <main>
+                <h2>Üdvözöllek az Írott oktatóanyagok oldalon!</h2>
+                <p>Itt érhetők el a letölthető és olvasható segédanyagok, dokumentumok.</p>
+            </main>
+        </div>
+
     </div>
 
 </body>
