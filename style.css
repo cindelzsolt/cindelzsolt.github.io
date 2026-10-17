@@ -158,3 +158,39 @@ main {
         padding: 0 15px !important;
     }
 }
+/* Lábléc és kapcsolat formázása */
+.oldal-lablec {
+    margin-top: 40px;
+    padding: 20px 0 10px 0;
+    font-size: 0.9rem;
+    color: #555555;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.kapcsolat-infok {
+    margin-bottom: 15px;
+}
+
+.kapcsolat-infok a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.kapcsolat-infok a:hover {
+    text-decoration: underline;
+}
+
+.lablec-elvalaszto {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.jogi-nyilatkozat {
+    font-size: 0.8rem;
+    color: #777777;
+}
