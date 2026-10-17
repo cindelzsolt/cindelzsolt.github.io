@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fóoldal</title>
+    <title>Főoldal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Bal oldali fix menüsor -->
+    <!-- 1. Bal oldali fix menüsor (ez marad a helyén) -->
     <nav class="sidebar">
-      <!-- A profilkép pontosan a menü felett, a sáv teljes szélességében -->
-    <img src="Kepek/Profilkép.png" alt="Profilkép" style="width: 100%; height: auto; display: block; margin-bottom: 15px;">
+        <img src="Kepek/Profilkép.png" alt="Profilkép" style="width: 100%; height: auto; display: block; margin-bottom: 15px;">
         <h2>Menü</h2>
         <ul>
             <li><a href="index.html">Főoldal</a></li>
@@ -25,19 +24,23 @@
         </ul>
     </nav>
 
-    <!-- Jobb oldali tartalom wrapper -->
+    <!-- 2. Jobb oldali tartalom wrapper -->
     <div class="content-wrapper">
-      <!-- Az új fejléc kép a főoldal címe felett -->
-    <img src="Kepek/Fejléc.png" alt="Fejléc" class="fejlec-kep">
-        <header>
-        <h1>Főoldal</h1>
-    </header>
         
-        <main>
-            <h2>Üdvözöllek a weboldalamon</h2>
-            <p>Ez a weboldal a Sunrider hálózat gyors és hatékony építésének oktatását tartalmazza, hogy lépésről lépésre megvalósíthasd a céljaidat.</p>
-    </div>
-        </main>
+        <!-- 3. Itt kezdeményezzük a keretet, ami max 980px széles és balra van zárva -->
+        <div class="oldal-keret">
+            <img src="Kepek/Fejléc.png" alt="Fejléc" class="fejlec-kep">
+            <header>
+                <h1>Főoldal</h1>
+            </header>
+            
+            <main>
+                <h2>Üdvözöllek a weboldalamon</h2>
+                <p>Ez a weboldal a Sunrider hálózat gyors és hatékony építésének oktatását tartalmazza, hogy lépésről lépésre megvalósíthasd a céljaidat.</p>
+            </main>
+        </div><!-- Itt záródik az oldal-keret -->
+
+    </div><!-- Itt záródik a content-wrapper -->
 
 </body>
 </html>

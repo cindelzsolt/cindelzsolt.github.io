@@ -78,21 +78,40 @@ main {
     background-color: #ffffff;
     flex: 1;
 }
-.oldal-keret {
-    width: 100%;             /* Keskenyebb monitorokon és mobilon teljesen kitölti a szélességet */
-    max-width: 980px;        /* Nagyobb (19 colos vagy nagyobb) monitoron megáll ebben a méretben */
-    margin: 0 auto;          /* Középre igazítja a keretet széles képernyőn */
-    box-sizing: border-box;  /* Biztosítja, hogy a margók és a padding ne nyomják szét a méretet */
+.fejlec-kep {
+    width: 100%;
+    height: auto;
+    display: block;
 }
+.oldal-keret {
+    width: 100%;
+    max-width: 768px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+}
+/* Reszponzív beállítások mobilos és tabletes nézethez (768 képpont alatt) */
 @media screen and (max-width: 768px) {
-    .oldal-keret {
-        padding: 10px;
+    body {
+        flex-direction: column; /* Egymás alá rendezzük a fix menüt és a tartalmat */
     }
 
-    /* Példa az oszlopok egymás alá rendezésére mobilon */
-    .bal-menu, .fo-tartalom {
-        width: 100% !important;
-        float: none;
-        display: block;
+    nav.sidebar {
+        position: relative;     /* Mobilon már nem lebeg/fix, hanem a lap tetején kezdődik */
+        width: 100%;            /* Teljes szélességet kap */
+        height: auto;           /* A magassága igazodik a tartalomhoz/menüpontokhoz */
+        overflow-y: visible;
+        border-right: none;
+        border-bottom: 1px dashed #b0bec5; /* Alulra kerül az elválasztó vonal */
+    }
+
+    .content-wrapper {
+        margin-left: 0;         /* Eltüntetjük a PC-re szánt bal oldali margót */
+        width: 100%;
+    }
+
+    .oldal-keret {
+        max-width: 100%;        /* Mobilon teljes szélességben terül el */
+        padding: 0 15px;        /* Kisebb oldalsó margók telefonon a szélénél */
     }
 }
