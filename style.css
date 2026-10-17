@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* Alapértelmezésben a hamburger elemek rejtve vannak PC-n */
+/* Alapértelmezésben (PC-n) a checkbox és a gomb rejtve van */
 .menu-checkbox {
     display: none;
 }
@@ -118,28 +118,33 @@ main {
         padding: 15px !important;
     }
 
-    /* Megjelenítjük a hamburger gombot a profilkép alatt */
-    .menu-label {
+    /* A csúnya kék dobozt teljesen eltüntetjük mobilon is */
+    input.menu-checkbox {
+        display: none !important;
+    }
+
+    /* Megjelenítjük a csinos Menü gombot a profilkép alatt */
+    label.menu-label {
         display: block !important;
         background-color: #2980b9;
-        color: white;
+        color: #ffffff;
         padding: 12px 15px;
         text-align: center;
         font-weight: bold;
         cursor: pointer;
         border-radius: 6px;
-        margin-top: 5px;
+        margin-top: 10px;
         margin-bottom: 15px;
         font-size: 1.1rem;
     }
 
-    /* Mobilon alapból elrejtjük a menülistát */
+    /* Alapértelmezésben elrejtjük a menülistát mobilon, hogy össze legyen csukva */
     nav.sidebar ul.menu-list {
         display: none !important;
     }
 
-    /* Ha a checkbox be van pipálva (rákattintottak a gombra), megjelenik a lista */
-    .menu-checkbox:checked ~ ul.menu-list {
+    /* Ha rákattintanak a gombra (beipálódik a rejtett doboz), akkor megnyílik a lista */
+    input.menu-checkbox:checked ~ ul.menu-list {
         display: block !important;
     }
 
